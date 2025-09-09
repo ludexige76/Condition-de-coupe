@@ -136,14 +136,14 @@ elif operation == "Tournage":
         "ℹ️ L’avance par tour doit être **supérieure à la longueur de listel** pour activer correctement le brise-copeaux.")
 
     N = (1000 * vc) / (math.pi * D)
-    Vf = f
+    Vf = N * f
     t = longueur / Vf if Vf > 0 else 0
 
     fmax = 0.18 * math.sqrt(Ra * Re)
 
     st.markdown("### ✅ Résultats")
     st.write(f"🔁 Vitesse de rotation (N) : **{N:.0f} tr/min**")
-    st.write(f"➡️ Vitesse d’avance (f) : **{Vf:.1f} mm/tr**")
+    st.write(f"➡️ Vitesse d’avance (Vf) : **{Vf:.1f} mm/min**")
     #st.write(f"⏱️ Temps estimé d’usinage : **{t:.2f} min**")
     st.write(f"🔎 Avance max recommandée f<sub>max</sub> = **{fmax:.3f} mm/tr**", unsafe_allow_html=True)
 
